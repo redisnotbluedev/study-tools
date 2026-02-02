@@ -1,0 +1,25 @@
+title: "Study Tools"
+description: "A collection of useful study tools for students"
+author: "Study Tools Team"
+url: "https://study-tools.example.com"
+baseurl: "/study-tools"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Include files
+include:
+  - _pages
