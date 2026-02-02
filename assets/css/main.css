@@ -93,6 +93,23 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+.sign-in-btn {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.sign-in-btn:hover {
+  background: var(--accent-color);
+}
+
 main {
   max-width: 1200px;
   margin: 2rem auto;
@@ -261,6 +278,12 @@ footer {
   }
 
   #theme-toggle {
+    position: static;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .sign-in-btn {
     position: static;
     margin: 1rem auto;
     display: block;
