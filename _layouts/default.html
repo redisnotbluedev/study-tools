@@ -11,6 +11,7 @@
           <li><a href="/tips">Study Tips</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </header>
     <main>
       {{ content }}
@@ -18,5 +19,19 @@
     <footer>
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
     </footer>
+    <script>
+      const toggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      body.setAttribute('data-theme', currentTheme);
+      toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+      toggle.addEventListener('click', () => {
+        const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        toggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      });
+    </script>
   </body>
 </html>
